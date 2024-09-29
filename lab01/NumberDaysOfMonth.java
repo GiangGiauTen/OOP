@@ -14,19 +14,19 @@ public class NumberDaysOfMonth {
         // vào HashMap
         // Nhập tháng và năm;
         Scanner sc = new Scanner(System.in);
-        System.out.print("Nhập tháng: ");
+        System.out.print("Enter month: ");
         String month = sc.nextLine();
-        System.out.print("Nhập năm: ");
+        System.out.print("Enter year: ");
         int year;
         try {
             year = sc.nextInt();
         } catch (InputMismatchException e) {
-            System.out.println("Năm không hợp lệ");
+            System.out.println("Invalid year");
             return;
         }
         // Kiểm tra tính hợp lệ của năm
         if (year < 1000) {
-            System.out.println("Năm phải đủ 4 chữ số");
+            System.out.println("Year must have 4 digits");
             System.exit(0);
         }
         // Lấy danh sách tháng ở dạng thường: January, February,...
@@ -74,11 +74,11 @@ public class NumberDaysOfMonth {
 
     public static void printDaysOfMonth(int month, int year) {
         if (month > 12 || month < 1) {
-            System.out.println("Tháng bạn nhập không hợp lệ");
+            System.out.println("The month you entered is invalid");
             System.exit(0);
         }
         int days = getDaysOfMonth(month, year);
-        System.out.printf("Số ngày trong tháng %d của năm %d là: %d", month, year, days);
+        System.out.printf("Number of days in the month %d of year %d is: %d", month, year, days);
         System.exit(0);
     }
 
@@ -91,10 +91,10 @@ public class NumberDaysOfMonth {
         if (isExist == true) {
             // Nếu tên tháng chính xác
             int days = daysOfMonthList.get(month);
-            System.out.printf("Số ngày trong tháng %s là: %d", month, days);
+            System.out.printf("Number of days in the month %s is: %d", month, days);
         } else {
             // Nếu không
-            System.out.printf("Tháng bạn nhập không chính xác");
+            System.out.printf("The month you entered is incorrect.");
         }
         System.exit(0);
     }
