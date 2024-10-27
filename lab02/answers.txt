@@ -1,0 +1,6 @@
+Getter và setter nên được sử dụng trong các trường hợp sau:
+1.	Bảo mật và bảo toàn dữ liệu: Đảm bảo dữ liệu được kiểm soát và xử lý trước khi truy cập hoặc cập nhật, giúp bảo vệ tính toàn vẹn của dữ liệu.
+2.	Giữ tính trừu tượng: Cô lập phần triển khai nội bộ của lớp, giúp mã bên ngoài không bị ảnh hưởng khi có thay đổi trong lớp.
+3.	Giới hạn và kiểm soát quyền truy cập: Giới hạn các tình huống cụ thể mà thuộc tính có thể thay đổi, hoặc tạo các thuộc tính chỉ đọc/chỉ ghi.
+4.	Thêm logic xử lý: Cho phép thêm logic trước khi trả về hoặc cập nhật giá trị, ví dụ như tính toán, logging...
+5.	Tương thích với framework: Một số framework yêu cầu getter và setter để hoạt động chính xác.
